@@ -1,29 +1,29 @@
-#
+# TODO: optflags
 Summary:	Faster then aircrack-ng WEP key cracker
-Summary(pl.UTF-8):	Szybszy niø aircrack-ng ≥amacz kluczy WEP
+Summary(pl.UTF-8):	Szybszy ni≈º aircrack-ng ≈Çamacz kluczy WEP
 Name:		aircrack-ptw
 Version:	1.0.0
-Release:	0
+Release:	0.1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://www.cdc.informatik.tu-darmstadt.de/aircrack-ptw/download/%{name}-%{version}.tar.gz
 # Source0-md5:	1d7d84d1e69189bc1397db3f565c183a
 URL:		http://www.cdc.informatik.tu-darmstadt.de/aircrack-ptw/
 BuildRequires:	libpcap-devel
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	aircrack-ng
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Using this version, it is possible to recover a 104 bit WEP key with
-probability 50% using just 40,000 captured packets. For 60,000 available
-data packets, the success probability is about 80% and for 85,000 data
-packets about 95%.
+probability 50% using just 40,000 captured packets. For 60,000
+available data packets, the success probability is about 80% and for
+85,000 data packets about 95%.
 
 %description -l pl.UTF-8
-Uøywaj±c tego oprogramowania istenieje moøliwo∂Ê odzyskania 104 bitowego klucza
-WEP z prawdopodobieÒstwem 50% przy wykorzystaniu 40,000 z≥apanych pakietÛw.
-Przy 60,000 pakietÛw prawdopodobieÒstwo wynosi oko≥o 80%, a przy 85,000 oko≥o 95%.
-
+U≈ºywajƒÖc tego oprogramowania istnieje mo≈ºliwo≈õƒá odzyskania
+104-bitowego klucza WEP z prawdopodobie≈Ñstwem 50% przy wykorzystaniu
+40000 z≈Çapanych pakiet√≥w. Przy 60000 pakiet√≥w prawdopodobie≈Ñstwo
+wynosi oko≈Ço 80%, a przy 85000 oko≈Ço 95%.
 
 %prep
 %setup -q
