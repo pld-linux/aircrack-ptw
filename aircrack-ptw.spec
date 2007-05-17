@@ -1,4 +1,3 @@
-# TODO: optflags
 Summary:	Faster then aircrack-ng WEP key cracker
 Summary(pl.UTF-8):	Szybszy niż aircrack-ng łamacz kluczy WEP
 Name:		aircrack-ptw
@@ -10,6 +9,7 @@ Source0:	http://www.cdc.informatik.tu-darmstadt.de/aircrack-ptw/download/%{name}
 # Source0-md5:	1d7d84d1e69189bc1397db3f565c183a
 URL:		http://www.cdc.informatik.tu-darmstadt.de/aircrack-ptw/
 BuildRequires:	libpcap-devel
+BuildRequires:	sed >= 4.0
 Requires:	aircrack-ng
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -28,6 +28,8 @@ wynosi około 80%, a przy 85000 około 95%.
 %prep
 %setup -q
 
+sed -i -e 's/gcc/%{__cc}/;s/-O3/%{rpmcflags}/' Makefile
+
 %build
 %{__make}
 
@@ -35,7 +37,7 @@ wynosi około 80%, a przy 85000 około 95%.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -m 755 aircrack-ptw $RPM_BUILD_ROOT%{_bindir}
+install aircrack-ptw $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
