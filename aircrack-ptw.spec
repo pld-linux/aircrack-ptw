@@ -2,7 +2,7 @@ Summary:	Faster then aircrack-ng WEP key cracker
 Summary(pl.UTF-8):	Szybszy niż aircrack-ng łamacz kluczy WEP
 Name:		aircrack-ptw
 Version:	1.0.0
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://www.cdc.informatik.tu-darmstadt.de/aircrack-ptw/download/%{name}-%{version}.tar.gz
